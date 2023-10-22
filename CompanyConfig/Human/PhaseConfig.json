@@ -26,7 +26,7 @@
       "Modality: \"{modality}\".",
       "Ideas: \"{ideas}\".",
       "We have decided to complete the task through a executable software implemented via a programming language. ",
-      "As the {assistant_role}, to satisfy the new user's demand and make the software realizable, you should propose a concrete programming language. If python can complete this task via Python, please answer Python; otherwise, answer another programming language (e.g., Java, C++, etc,).",
+      "As the {assistant_role}, to satisfy the new user's demand and make the software realizable, you should propose a concrete programming language. If javascript can complete this task via TypeScript, please answer TypeScript; otherwise, answer another programming language (e.g., Java, C++, TypeScript, etc,).",
       "Note that we must ONLY discuss the target programming language and do not discuss anything else! Once we all have expressed our opinion(s) and agree with the results of the discussion unanimously, any of us must actively terminate the discussion and conclude the best programming language we have discussed without any other words or reasons, return only one line using the format: \"<INFO> *\" where \"*\" represents a programming language."
     ]
   },
@@ -246,13 +246,27 @@
       "Ideas: \"{ideas}\"",
       "Codes: ",
       "\"{codes}\"",
-      "As the {assistant_role}, you should write a requirements.txt file, which is commonly used in Python projects to specify the dependencies or packages required for the project to run properly. It serves as a way to document and manage the project's dependencies in a standardized format. For example:",
+      "As the {assistant_role}, you should write a requirements.txt file, which is commonly used in Python projects to specify the dependencies or packages required for the project to run properly. It serves as a way to document and manage the project's dependencies in a standardized format. This requirements.txt will need to handle the backend of our application. For example:",
       "requirements.txt",
       "```",
       "numpy==1.19.2",
       "pandas>=1.1.4",
       "```",
-      "According to the codes and file format listed above, write a requirements.txt file to specify the dependencies or packages required for the project to run properly."
+      "According to the codes and file format listed above, write a requirements.txt file to specify the dependencies or packages required for the project to run properly.",
+      "Finally, projects may require a front end web application, if this is requrested, write a package.json file to satisfy its requirements. For example:",
+      "package.json",
+      "```",
+      "\"name\": \"langchain-frontend\"",
+      "\"version\": \"1.0.0\"",
+      "\"description\": \"LangChain Frontend\"",
+      "\"main\": \"index.js\"",
+      "\"scripts\": {",
+      "\"test\": \"echo \"Error: no test specified\" && exit 1\" },",
+
+      "\"author\": \"<NAME>\",",
+      "\"license\": \"ISC\"",
+      "```",
+      "According to the codes and file format listed above, write a package.json file to satisfy its requirements."
     ]
   },
   "Manual": {
